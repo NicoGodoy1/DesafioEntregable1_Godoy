@@ -85,4 +85,3 @@ console.log(productManager.addProduct(newProduct));
 //Se evaluará que getProductById devuelva error si no encuentra el producto o el producto en caso de encontrarlo
 console.log(productManager.getProductById(1));
 console.log(productManager.getProductById(15));
-
