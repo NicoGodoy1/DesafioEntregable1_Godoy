@@ -34,10 +34,10 @@ class ProductManager {
         const products = await this.read()
         const product = products.find(p => p.id === id );
         if(!product){
-            console.error(`-Product ID: ${id} not found`)
+            console.error(`-Product id: ${id} not found`)
             return
         }
-        console.log(`-Product ID: ${id} found`)
+        console.log(`-Product id: ${id} found`)
         return product;
     }
 
@@ -110,7 +110,7 @@ app.use((err, req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-  res.send( '<h1 style="color: red">¡Bienvenido al servidor!<h1>')
+  res.send('<h1 style="color: red">¡Bienvenido al servidor!<h1>')
 })
 
 app.get('/products', async (req, res, next) => {
@@ -127,7 +127,11 @@ app.get('/products/:pid', async (req, res, next) => {
   try {
     const productId = parseInt(req.params.pid)
     const product = await productManager.getProductById(productId)
-    res.json(product)
+    if (product) {
+        res.json(product)
+    } else {
+        res.status(404).json({ error: 'El producto no existe' });
+    }
   } catch (error) {
     next(error)
   }
