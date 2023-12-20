@@ -8,7 +8,7 @@ const cartsRouter = Router();
 cartsRouter.get('/', async (req, res)  =>{
     const carts = await cartManager.getCarts();
     res.send(carts);
-})
+});
 
 cartsRouter.get('/:cId', async (req, res)  =>{
     const {cId} = req.params;
@@ -18,8 +18,7 @@ cartsRouter.get('/:cId', async (req, res)  =>{
     }
     res.send(cartById);
 
-})
-
+});
 
 cartsRouter.post('/', async (req, res)=> {
     const cartAdded = await cartManager.addCart();
@@ -28,7 +27,7 @@ cartsRouter.post('/', async (req, res)=> {
     }
     res.send({message: 'cart added'});
 
-})
+});
 
 cartsRouter.post('/:cId/product/:pId', async (req, res)=> {
     const { cId, pId} = req.params;
@@ -38,6 +37,6 @@ cartsRouter.post('/:cId/product/:pId', async (req, res)=> {
     }    
     res.send({message:'product added to cart'})
 
-})
+});
 
 module.exports = cartsRouter;

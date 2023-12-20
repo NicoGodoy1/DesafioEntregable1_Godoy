@@ -29,7 +29,7 @@ try {
 } catch (error) {
     next(error)
 }
-})
+});
 
 productsRouter.delete('/:pId', async (req, res)=> {
   const {pId} = req.params;
@@ -38,6 +38,29 @@ productsRouter.delete('/:pId', async (req, res)=> {
     return res.status(404).send({message: 'product not found'});
   }
   res.send({message: 'product deleted'});
-})
+});
+
+productsRouter.post("/", async (req, res) => {
+  const newProduct = req.body;
+  try {
+      const addProduct = await productManager.addProduct(newProduct);
+      res.send({message: "Product added"});
+  } catch (error) {
+      res.send({message: "Error adding product"});
+      console.log(error);
+  }
+});
+
+productsRouter.put("/:pId", async (req, res) => {
+  try {
+      const { pId } = req.params;
+      const updateProduct = req.body;
+      const products = await productManager.updateProduct(updateProduct, pId);
+      res.send({message: "Product updated"});
+  } catch (error) {
+      console.error(error);
+      res.status(404).send({message:"Product not found"});
+  }
+});
 
 module.exports = productsRouter;
