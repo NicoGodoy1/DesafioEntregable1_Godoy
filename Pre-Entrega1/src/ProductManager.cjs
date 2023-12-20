@@ -109,6 +109,6 @@ class ProductManager {
             return false;
         }
      }
-}
+};
 
 module.exports = ProductManager;

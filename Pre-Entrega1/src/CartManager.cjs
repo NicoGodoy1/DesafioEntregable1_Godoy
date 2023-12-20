@@ -56,7 +56,7 @@ class CartManager {
                 if(cart.id === +cId){
                     const existingProduct = cart.products.find(p => p.id === +pId);
                     if(existingProduct){
-                        existingProduct++;
+                        existingProduct.quantity++;
                     }
                     else {
                         cart.products = [...cart.products, {id: +pId, quantity: 1}];
@@ -72,6 +72,6 @@ class CartManager {
         }
     }
 
-}
+};
 
 module.exports = CartManager;
