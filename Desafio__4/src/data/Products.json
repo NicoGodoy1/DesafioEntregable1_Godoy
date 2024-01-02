@@ -2,7 +2,7 @@
     {
         "id": 1,
         "status": true,
-        "title": "oreo",
+        "title": "Oreo",
         "description": "galleta dulce",
         "category": "galletitas",
         "price": 600,
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "status": true,
-        "title": "yerba verdeflor",
+        "title": "Yerba verdeflor",
         "description": "yerba",
         "category": "mate",
         "price": 1350,
@@ -35,8 +35,8 @@
     {
         "id": 4,
         "status": true,
-        "title": "aceite cocinero",
-        "description": "aceite de girasol",
+        "title": " Aceite cocinero",
+        "description": "Aceite de girasol",
         "category": "aceites",
         "price": 1050,
         "thumbnail": "https://statics.dinoonline.com.ar/imagenes/large_460x460/2320123_l.jpg",
@@ -46,7 +46,7 @@
     {
         "id": 5,
         "status": true,
-        "title": "caballa cumaná",
+        "title": "Caballa cumaná",
         "description": "caballa enlatada",
         "category": "conservas",
         "price": 1050,
