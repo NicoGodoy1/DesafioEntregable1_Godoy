@@ -48,7 +48,7 @@ class ProductManager {
     }
 
     addProduct = async (product) => {
-        const camposObligatorios = ['title', 'description', 'price', 'code', 'stock'];
+        const camposObligatorios = ['title', 'description', 'price', 'thumbnail', 'code', 'stock', 'category'];
             for (const campo of camposObligatorios) {
             if (!product[campo]) {
                 return console.log(`-Debe completar el campo: ${campo} para poder agregar el producto`);
@@ -68,9 +68,12 @@ class ProductManager {
             title: product.title,
             description: product.description,
             price: product.price,
-            thumbnail: product.thumbnail || 'Sin imagen',
+            thumbnail: product.thumbnail,
             code: product.code,
             stock: product.stock,
+            category: product.category,
+            stock: product.stock,
+            status: true, 
         };
 
         list.push(newProduct)
@@ -92,6 +95,20 @@ class ProductManager {
         });
         await this.write(updatedProducts)
     }
-}
 
-export default ProductManager;
+    deleteProduct = async (id) => {
+        const products = await this.getProducts()
+        const productId = products.some(prod => prod.id === +id )
+
+        if(productId) {
+            const newProductList = products.filter(prod => prod.id !== +id)
+            await fs.promises.writeFile(this.path, JSON.stringify(newProductList), 'utf-8');
+            return true;
+        } else {
+            console.log(`ID ${id} does not exist`);
+            return false;
+        }
+     }
+};
+
+module.exports = ProductManager;
