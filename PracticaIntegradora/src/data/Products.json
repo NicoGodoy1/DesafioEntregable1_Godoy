@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "status": true,
+        "title": "Oreo",
+        "description": "galleta dulce",
+        "category": "galletitas",
+        "price": 600,
+        "thumbnail": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/2142441_f.jpg",
+        "code": "A1",
+        "stock": 27
+    },
+    {
+        "id": 2,
+        "status": true,
+        "title": "Yerba verdeflor",
+        "description": "yerba",
+        "category": "mate",
+        "price": 1350,
+        "thumbnail": "https://statics.dinoonline.com.ar/imagenes/large_460x460/2010293_l.jpg",
+        "code": "A2",
+        "stock": 34
+    },
+    {
+        "id": 3,
+        "status": true,
+        "title": "Pepsi",
+        "description": "Bebida gasificada",
+        "category": "Pepsi",
+        "price": 1150,
+        "thumbnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A3",
+        "stock": 54
+    },
+    {
+        "id": 4,
+        "status": true,
+        "title": " Aceite cocinero",
+        "description": "Aceite de girasol",
+        "category": "aceites",
+        "price": 1050,
+        "thumbnail": "https://statics.dinoonline.com.ar/imagenes/large_460x460/2320123_l.jpg",
+        "code": "A4",
+        "stock": 47
+    },
+    {
+        "id": 5,
+        "status": true,
+        "title": "Caballa cumaná",
+        "description": "caballa enlatada",
+        "category": "conservas",
+        "price": 1050,
+        "thumbnail": "https://statics.dinoonline.com.ar/imagenes/large_460x460/2410011_l.jpg",
+        "code": "A5",
+        "stock": "69"
+    },
+    {
+        "id": 6,
+        "status": true,
+        "title": "Leche la Lacteo",
+        "description": "leche descremada la lacteo",
+        "category": "lacteos",
+        "price": 600,
+        "thumbnail": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3262926_f.jpg",
+        "code": "A6",
+        "stock": 12
+    }
+]
